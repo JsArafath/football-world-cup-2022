@@ -1,12 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ====================================================
+            ******** Fonts *********
+==================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ====================================================
+            ******** Utilities *********
+==================================================== */
+
+body {
+    width: 100%;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
 }
 
-.hero {
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.section-wrapper {
+    margin: 30px;
+    width: 90%;
+}
+
+.half-width {
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #161616;
+    background-color: #FFFFFF;
+}
+
+/* ====================================================
+            ******** Top Banner Style *********
+                           start
+==================================================== */
+.top-banner {
     min-height: 370px;
+    width: 5000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,84 +57,50 @@
     padding-bottom: 50px;
     border-radius: 30px;
     margin-top: 50px;
-
 }
 
-.hero-title {
-    color: white;
-}
-
-.hero-p {
-    color: #787885;
-}
-
-#hero .container {
-    display: flex;
+.half-width {
     justify-content: center;
-    align-items: center;
-    gap: 115px;
-    padding-left: 50px;
 }
 
-#hero .container div {
-    flex: 1;
+.desc-wrapper {
+    padding-left: 80px;
 }
 
-.hero-content h1 {
-    font-size: 52px;
+.desc-wrapper,
+.image-wrapper {
+    width: 80%;
+}
+
+.top-banner .top-banner-title {
+    font-size: 3.2552083333333335vw;
     font-weight: 700;
-}
-
-.hero-content p {
-    font-weight: 600;
-    margin: 10px 0 30px;
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.hero:hover .btn {
-
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-    font-size: 30px;
-    transition: 5s;
-    background-color: black;
+    text-align: left;
     color: white;
 }
 
-
-header {
-    width: 88%;
-    margin: 0 auto;
+.top-banner .top-banner-desc {
+    font-size: 80%;
+    font-weight: 400;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
 }
 
-/* ----------------------------
-         Header Section
- ---------------------------- */
-.header-section {
-    display: flex;
-    background-color: #151515;
-    margin-top: 55px;
-    border-radius: 20px;
+.image-wrapper {
+    padding-top: 20px;
     justify-content: center;
-    align-items: center;
-    height: 550px;
+    align-items: baseline;
 }
 
-.header-text-section {
-    width: 44%;
-    color: #ffffff;
-    margin-bottom: 20px;
+.image-wrapper img {
+    width: 40%;
 }
 
-.header-text-section h1 {
-    font-size: 4.4vw;
-}
-
-.button-part {
+.link-button {
+    display: inline-block;
     background-color: rgb(31, 60, 173);
     text-decoration: none;
     border: none;
@@ -102,124 +108,95 @@ header {
     font-weight: 700;
     color: #fff;
     border-radius: 7px;
-    transition: .5s;
+    transition: 60%;
     margin-top: 50px;
+
 }
 
-.button-part i {
-    padding-left: 7px;
-}
-
-.button-part:hover {
-    background-color: #151515;
-    border-style: solid;
-}
-
-.header-img-part {
-    width: 44%;
-}
-
-#img-section {
-    width: 40%;
-    margin-left: 100px;
-}
+/* ====================================================
+            ******** Top Banner Style *********
+                           End
+==================================================== */
 
 
 
-/* ---------------------------
-      Details Blog Section
------------------------------ */
-main {
-    width: 88%;
-    margin: 0 auto;
-}
 
-.container-section {
-    margin-top: 120px;
-}
+/* ====================================================
+            ******** Main Section Style *********
+                           Start
+==================================================== */
 
 .main-section {
-    display: flex;
-    flex-direction: row;
+    grid-template-columns: 245px 1fr;
+    column-gap: 15px;
 }
+/* ====================================================
+            ******** Main Section Style *********
+                           End
+==================================================== */
 
-/*----------Navbar----------*/
-.navbar-menu-section {
-    width: 350px;
-    height: 260px;
-    display: flex;
+
+
+/* ====================================================
+            ******** Side Navigation Style *********
+                           Start
+==================================================== */
+.side-nav {
     flex-direction: column;
-    background-color: #151515;
-    border-radius: 16px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.navbar-menu-section a {
-
-    border-radius: 5px;
-    margin: 12px 0px;
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-.menu-bar-active {
-    background-color: rgb(31, 60, 173);
-    color: white;
-    text-align: center;
-    padding: 15px 30px;
-}
-
-.menu-bar {
-    background-color: white;
-    height: 100px;
-    text-align: center;
-    color: black;
-    padding-top: 10px;
-    padding: 10px 32px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-
-
-/* ------------------------
-     Grid Card Section
---------------------------*/
-.card-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    margin-left: 20px;
-}
-
-.hello {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    margin-left: 20px;
-}
-
-.blog-card-section {
-    border: 1px solid #e0dede;
-    margin-bottom: 20px;
+    height: 240px;
+    background-color:black;
     border-radius: 10px;
+    padding: 5px;
+    width: 90%;
 }
 
-.blog-image-section img {
-    width: 100%;
+.side-nav a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    width: 85%;
+    height: 18px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+
 }
 
-.card-details {
-    padding: 15px;
+
+
+.side-nav #active {
+    background-color:rgb(31, 60, 173) ;
+    color: #FFFFFF;
+}
+.hhhh{
+    padding-top: 2000px;
+}
+/* ====================================================
+            ******** Side Navigation Style *********
+                           End
+==================================================== */
+
+/* ====================================================
+            ******** Blog Style *********
+                        Start
+==================================================== */
+.blogs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-#button {
-    border: 1.5px solid rgb(49, 48, 48);
+.blogs .blog-details,
+.blog-info {
+    width: 90%;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mmmmm{
+    border: 1px solid;
     text-decoration: none;
     border-radius: 5px;
     color: black;
@@ -227,199 +204,326 @@ main {
     padding: 5px 20px;
 }
 
+.sssss{
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
 
-/*----Blog Icon Part----*/
-.blog-icon {
-    display: flex;
+}
+.blogs .blog {
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    flex-direction: column;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
-.blog-icon span {
-    display: flex;
-    align-items: center;
-    margin: 0 20px 10px 0px;
-}
-
-span p {
-    margin-left: 5px;
-}
-
-.section-extra {
-    background-color: white;
-    display: flex;
-    margin-top: 85px;
-    margin-left: 150px;
-}
-
-
-/*----------------------
-       Footer Part
------------------------*/
-footer {
-    background-color: #191919;
-    padding: 80px;
-    margin-top: 150px;
-}
-
-footer h2 {
-    text-align: center;
-    color: white;
-    margin-top: -40px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.line {
+.blog-thumbnail {
+    margin-bottom: 10px;
     width: 100%;
-    border: 0;
-    height: 1.5px;
-    background-color: #3d3d3d;
 }
 
-/*Navbar of Footer*/
-footer nav {
-    display: flex;
-    justify-content: center;
+.blog .blog-thumbnail img {
+    width: 100%;
+}
+
+.blogs .blog-details a {
+    border: 1px solid #161616;
+    border-radius: 5px;
+    padding: 4px 16px;
+
+}
+
+.blogs .blog-details h1 {
+    color: #000000;
+}
+
+.blog-info i {
+    color: black;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+/* ====================================================
+            ******** Blog Style *********
+                        End
+==================================================== */
+
+
+
+/* ====================================================
+            ******** Footer Style *********
+                        Start
+==================================================== */
+footer {
+    flex-direction: column;
     align-items: center;
+    background-color: #161616;
 }
 
-#footer-nav {
-    text-decoration: none;
-    padding: 50px 20px;
-    font-size: 16px;
-    color: #B9B9B9;
+footer a {
+    color: #FFFFFF;
+    background-color: #161616;
 }
 
-.footer-section {
-    display: flex;
-    padding-top: 20px;
-}
-
-.social-media-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 30px;
-    margin-top: 10px;
-}
-
-.social-media-icon i {
-    color: white;
-    font-size: 25px;
-
-}
-
-.see {
+footer h1 {
     text-align: center;
-    background-color: red;
-    color: white;
-    text-decoration: none;
-    padding-top: 10px;
-    width: 120px;
-    height: 50px;
-    margin-left: 320px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
 }
 
-
-
-
-
-/* Resposive*/
-@media (max-width: 2600px) {
-    .section-extra {
-        display: none;
-    }
-
-    .container {
-        max-width: 992px;
-    }
-
-    .see {
-        display: none;
-    }
-}
-
-
-
-
-/* Resposive Tab*/
-@media only screen and (max-width: 991.98px) {
-
-    .hee {
-        display: none;
-    }
-
-    .section-extra {
-        display: flex;
-    }
-
-    .card-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .see {
-        display: block;
-    }
-
+.footer-links {
+    padding: 30px;
+    width: 80%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
+.footer-links a {
+    margin: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.social-links {
+    margin-top: 20px;
+    width: 20%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    justify-content: space-evenly;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#view-button {
+    display: none;
+}
+
+/* ====================================================
+            ******** Footer Style *********
+                        End
+==================================================== */
 
 
+/* ====================================================
+            ******** Matches Style *********
+                        Start
+==================================================== */
+
+.matches .match {
+    flex-direction: column;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.match .match-details {
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+}
+
+.match-thumbnail {
+    grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+.match-thumbnail img {
+    width: 100%;
+}
+
+.match-thumbnail p {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(22, 22, 22, 1);
+}
+
+.match-details h3,
+p {
+    text-align: center;
+}
+
+.match-details h3 {
+    font-size: 20px;
+}
+
+.match-details p {
+    font-size: 16px;
+}
+/* ====================================================
+            ******** Blog Style *********
+                        End
+==================================================== */
 
 
+/* ====================================================
+            ******** Hover Style *********
+                        Start
+==================================================== */
+.top-banner:hover {
+    animation: banner 0.5 timing-function delay iteration-count direction fill-mode;
+}
 
+.top-banner:hover .link-button {
+    animation: shake 2s linear infinite;
+}
 
-/* Resposive MObile*/
-@media (max-width: 767.98px) {
-    #img-section {
-        margin-top: 50px;
+.top-banner .link-button:hover {
+    animation-play-state: paused;
+}
+
+a:hover {
+    background-color: black;
+    border: 1px solid;
+    color: #FFFFFF;
+    transition: 0.2s;
+}
+footer a:hover {
+    background-color: #FFFFFF;
+    color: black;
+    transition: 0.2s;
+}
+
+/* ====================================================
+            ******** Hover Style *********
+                        End
+==================================================== */
+
+/* ====================================================
+    ******** Media Queries For Mobile*********
+                    Start
+==================================================== */
+
+@media only screen and (max-width:767px) {
+
+    .section-wrapper {
+        width: 90%;
     }
 
-    .header-section {
+    .top-banner {
         flex-direction: column;
-        height: 100%;
-        justify-content: center;
         align-items: center;
-        padding-top: 50px;
+        justify-content: center;
+        border-radius: 10px;
     }
 
-    .header-img-part {
+    .half-width {
+        width: 70%;
+        text-align: center;
+    }
+
+    .top-banner .desc-wrapper {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+
+    .top-banner .desc-wrapper,
+    .image-wrapper {
         width: 100%;
     }
 
-    .section-part {
+    .top-banner .top-banner-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .top-banner .top-banner-desc {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .top-banner .image-wrapper {
+        padding-top: 15px;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .main-section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    .section-extra {
-        padding-left: 30px;
-    }
-
-    .section-main {
+    .side-nav {
+        margin-top: -20px;
+        margin-bottom: 10px;
         background-color: #FFFFFF;
     }
 
-    .menu-bar-active {
-        text-decoration: none;
+    .side-nav a {
+        border: 1px solid rgba(232, 232, 232, 1);
+        color: rgba(22, 22, 22, 1);
     }
 
-    .footer-section {
-        display: block;
-    }
-
-    #one {
-        margin-top: 20px;
-    }
-
-    .card-section {
+    .blogs {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .see {
-        display: none;
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 24px;
     }
 }
+/* ====================================================
+    ******** Media Queries For Mobile*********
+                     End
+==================================================== */
+
+/* ====================================================
+   ******** Media Queries For Tablet Devices*********
+                      Start
+==================================================== */
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-nav {
+        flex-direction: row;
+        background-color: #FFFFFF;
+        justify-content: space-between;
+        height: initial;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .side-nav a {
+        border: 1px solid rgba(232, 232, 232, 1);
+        color: rgba(22, 22, 22, 1);
+        width: 230px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #view-button {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+}
+/* ====================================================
+   ******** Media Queries For Tablet Devices*********
+                      End
+==================================================== */
